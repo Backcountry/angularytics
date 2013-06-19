@@ -29,7 +29,7 @@
         };
         $rootScope.$on('$locationChangeSuccess', function () {
           forEachHandlerDo(function (handler) {
-            var url = $location.path();
+            var url = $location.url();
             if (url) {
               handler.trackPageView(url);
             }
